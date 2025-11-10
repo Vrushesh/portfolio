@@ -1,0 +1,68 @@
+import Section from "@/components/Section";
+import ProjectCard, { type Project } from "@/components/ProjectCard";
+
+const projects: Project[] = [
+  {
+    title: "Arc-enabled VM Self‑Service (Azure Stack HCI)",
+    period: "2023–2025",
+    summary:
+      "Led self-service VM workflows with GPU-P/DDA support; built YAML/Go operators and CLI tooling; improved pipeline stability and GPU attach/detach validation.",
+    stack: ["Go", "Kubernetes", "Azure", "Hyper‑V", "PowerShell"],
+    links: [
+      { label: "GitHub", href: "https://github.com/" },
+    ],
+  },
+  {
+    title: "Availability Zones for Rack‑Aware Clusters",
+    period: "2022–2024",
+    summary:
+      "Shipped rack-aware placement and AZ-like fault domains; authored BVTs and chaos tests; collaborated across Hyper‑V and WMI teams.",
+    stack: ["C#", "Go", "K8s Operators", "BVT"],
+  },
+  {
+    title: "GPU Telemetry & Orchestration",
+    period: "2024",
+    summary:
+      "Instrumented GPU telemetry, driver health checks (PnPUtil), and automated failover with attach/detach validation in CI.",
+    stack: ["GPU‑P", "GPU‑DDA", "CI/CD", "Python"],
+  },
+];
+
+export default function Page() {
+  return (
+    <main>
+      <header className="container pt-16 pb-10">
+        <div className="card p-8">
+          <p className="text-sm text-white/60">Software Engineer</p>
+          <h1 className="mt-2">Vrushesh Patel</h1>
+          <p className="mt-4 text-white/80 max-w-3xl">
+            Systems & infrastructure engineer focused on Azure Stack HCI, Kubernetes operators,
+            and GPU virtualization. I like clean APIs, robust tests, and shipping pragmatic features.
+          </p>
+          <div className="mt-6 flex flex-wrap gap-3">
+            <a className="btn" href="mailto:hello@yourdomain.com">Email</a>
+            <a className="btn" href="https://github.com/" target="_blank" rel="noreferrer">GitHub</a>
+            <a className="btn" href="https://www.linkedin.com/" target="_blank" rel="noreferrer">LinkedIn</a>
+            <a className="btn" href="/Vrushesh_Patel_Resume.pdf" target="_blank" rel="noreferrer">Resume</a>
+          </div>
+        </div>
+      </header>
+
+      <Section title="Projects">
+        {projects.map((p) => <ProjectCard key={p.title} project={p} />)}
+      </Section>
+
+      <Section title="Skills">
+        <div className="grid md:grid-cols-3 gap-4">
+          <div className="card p-6"><h3>Core</h3><p className="mt-2 text-white/80">Go, Python, C#, TypeScript</p></div>
+          <div className="card p-6"><h3>Infra</h3><p className="mt-2 text-white/80">Azure, Kubernetes, Hyper‑V, CI/CD</p></div>
+          <div className="card p-6"><h3>Extras</h3><p className="mt-2 text-white/80">PowerShell, Bash, SQL, Git</p></div>
+        </div>
+      </Section>
+
+      <footer className="container my-16 text-white/50">
+        © {new Date().getFullYear()} Vrushesh Patel
+      </footer>
+    </main>
+  );
+}

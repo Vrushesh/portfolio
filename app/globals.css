@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root{ --bg: #0f1115; --fg: #f5f7fb; --muted:#99a3b3; --card:#11141a; }
+html, body, #__next { height: 100%; }
+body { background: var(--bg); color: var(--fg); font-feature-settings: "ss01" on, "cv01" on; }
+a { text-decoration: none; }
+.container { @apply mx-auto max-w-5xl px-6; }
+.card { @apply rounded-2xl bg-[var(--card)] shadow-soft border border-white/5; }
+.badge { @apply inline-flex items-center rounded-full border border-white/10 px-3 py-1 text-xs uppercase tracking-wide; }
+.btn { @apply inline-flex items-center gap-2 rounded-xl bg-white/10 px-4 py-2 font-medium hover:bg-white/15 transition; }
+h1 { @apply text-4xl md:text-5xl font-semibold; }
+h2 { @apply text-2xl md:text-3xl font-semibold; }
+h3 { @apply text-lg font-semibold; }
