@@ -3,28 +3,28 @@ import ProjectCard, { type Project } from "@/components/ProjectCard";
 
 const projects: Project[] = [
   {
-    title: "Arc-enabled VM Self‑Service (Azure Stack HCI)",
-    period: "2023–2025",
+    title: "WIP - this website",
+    period: "2025",
     summary:
-      "Led self-service VM workflows with GPU-P/DDA support; built YAML/Go operators and CLI tooling; improved pipeline stability and GPU attach/detach validation.",
-    stack: ["Go", "Kubernetes", "Azure", "Hyper‑V", "PowerShell"],
+      "Long overdue personal website that shares a bit about me and what I am working on. May expand in the future to share other thoughts.",
+    stack: ["React, Hosted with Vercel"],
     links: [
       { label: "GitHub", href: "https://github.com/" },
     ],
   },
   {
-    title: "Availability Zones for Rack‑Aware Clusters",
-    period: "2022–2024",
+    title: "Card Games with Sockets",
+    period: "2025",
     summary:
-      "Shipped rack-aware placement and AZ-like fault domains; authored BVTs and chaos tests; collaborated across Hyper‑V and WMI teams.",
-    stack: ["C#", "Go", "K8s Operators", "BVT"],
+      "Multiplayer games live on sockets, wanted to implement a fun game that people can play for free",
+    stack: ["React"],
   },
   {
-    title: "GPU Telemetry & Orchestration",
-    period: "2024",
+    title: "Messing around with .NET",
+    period: "2025",
     summary:
-      "Instrumented GPU telemetry, driver health checks (PnPUtil), and automated failover with attach/detach validation in CI.",
-    stack: ["GPU‑P", "GPU‑DDA", "CI/CD", "Python"],
+      "Someone asked me what .NET does and I thought let me show you?",
+    stack: [".NET, C#"],
   },
 ];
 
@@ -40,7 +40,7 @@ export default function Page() {
             and GPU virtualization. I like clean APIs, robust tests, and shipping pragmatic features.
           </p>
           <div className="mt-6 flex flex-wrap gap-3">
-            <a className="btn" href="mailto:hello@yourdomain.com">Email</a>
+            <a className="btn" href="mailto:vrusheshp+personalsite@gmail.com">Email</a>
             <a className="btn" href="https://github.com/" target="_blank" rel="noreferrer">GitHub</a>
             <a className="btn" href="https://www.linkedin.com/" target="_blank" rel="noreferrer">LinkedIn</a>
             <a className="btn" href="/Vrushesh_Patel_Resume.pdf" target="_blank" rel="noreferrer">Resume</a>
